@@ -24,6 +24,9 @@ const comando_versionate = function(mensaje) {
     const path = require("path");
     const fs = require("fs");
     // child_process.execSync("git init .", cmd_options);
+    child_process.execSync("git add .", cmd_options);
+    child_process.execSync("git commit -m " + JSON.stringify(mensaje), cmd_options);
+    child_process.execSync("git push", cmd_options);
     child_process.execSync("npm version patch", cmd_options);
     const package_path = path.resolve(process.cwd(), "package.json");
     const package_data = require(package_path);

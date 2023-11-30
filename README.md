@@ -15,6 +15,11 @@ Utilidad para hacer operaciones rápidas con Git en línea de comandos.
 npm install --global @allnulled/gitano
 ```
 
+Puedes encontrar la documentación en:
+
+  - [https://github.com/allnulled/gitano-bin](https://github.com/allnulled/gitano-bin)
+  - [https://www.npmjs.com/package/@allnulled/gitano](https://www.npmjs.com/package/@allnulled/gitano)
+
 # Uso
 
 Primero, emplazar el directorio actual al `.git` del proyecto. Luego:
