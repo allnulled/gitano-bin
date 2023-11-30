@@ -34,6 +34,7 @@ const comando_versionate = function(mensaje) {
     package_data.uuid_commit++;
     fs.writeFileSync(package_path, JSON.stringify(package_data, null, 4), "utf8");
     const version = package_data.version;
+    child_process.execSync("git add .", cmd_options);
     child_process.execSync("git commit -m " + JSON.stringify("v" + version), cmd_options);
     child_process.execSync("git push", cmd_options);
 };
