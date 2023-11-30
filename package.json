@@ -10,6 +10,14 @@
     "test": "node test/index.js"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "author": "allnulled",
+  "license": "WTFPL",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/allnulled/gitano-bin.git"
+  },
+  "bugs": {
+    "url": "https://github.com/allnulled/gitano-bin/issues"
+  },
+  "homepage": "https://github.com/allnulled/gitano-bin#readme"
 }
