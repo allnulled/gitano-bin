@@ -1,23 +1,24 @@
 {
-  "name": "@allnulled/gitano",
-  "version": "1.0.6",
-  "description": "Utilidad para hacer operaciones rápidas con Git en línea de comandos. ",
-  "main": "index.js",
-  "bin": {
-    "gitano": "index.js"
-  },
-  "scripts": {
-    "test": "node test/index.js"
-  },
-  "keywords": [],
-  "author": "allnulled",
-  "license": "WTFPL",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/allnulled/gitano-bin.git"
-  },
-  "bugs": {
-    "url": "https://github.com/allnulled/gitano-bin/issues"
-  },
-  "homepage": "https://github.com/allnulled/gitano-bin#readme"
+    "name": "@allnulled/gitano",
+    "version": "1.0.6",
+    "description": "Utilidad para hacer operaciones rápidas con Git en línea de comandos. ",
+    "main": "index.js",
+    "bin": {
+        "gitano": "index.js"
+    },
+    "scripts": {
+        "test": "node test/index.js"
+    },
+    "keywords": [],
+    "author": "allnulled",
+    "license": "WTFPL",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/allnulled/gitano-bin.git"
+    },
+    "bugs": {
+        "url": "https://github.com/allnulled/gitano-bin/issues"
+    },
+    "homepage": "https://github.com/allnulled/gitano-bin#readme",
+    "uuid_commit": 1
 }
