@@ -1,6 +1,6 @@
 {
     "name": "@allnulled/gitano",
-    "version": "1.0.11",
+    "version": "1.0.12",
     "description": "Utilidad para hacer operaciones rápidas con Git en línea de comandos. ",
     "main": "index.js",
     "bin": {
