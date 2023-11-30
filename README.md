@@ -37,7 +37,6 @@ El comando `push` consiste en:
 ```js
 const comando_push = function(mensaje) {
     const child_process = require("child_process");
-    child_process.execSync("git init .", cmd_options);
     child_process.execSync("git add .", cmd_options);
     child_process.execSync("git commit -m " + JSON.stringify(mensaje), cmd_options);
     child_process.execSync("git push", cmd_options);
@@ -58,14 +57,22 @@ El comando `versionate` consiste en:
 const comando_versionate = function(mensaje) {
     const child_process = require("child_process");
     const path = require("path");
-    child_process.execSync("git init .", cmd_options);
+    const fs = require("fs");
     child_process.execSync("git add .", cmd_options);
     child_process.execSync("git commit -m " + JSON.stringify(mensaje), cmd_options);
     child_process.execSync("git push", cmd_options);
     child_process.execSync("npm version patch", cmd_options);
+    const package_path = path.resolve(process.cwd(), "package.json");
+    const package_data = require(package_path);
+    if(!package_data.uuid_commit) {
+        package_data.uuid_commit = 0;
+    }
+    package_data.uuid_commit++;
+    fs.writeFileSync(package_path, JSON.stringify(package_data, null, 4), "utf8");
+    const version = package_data.version;
     child_process.execSync("git add .", cmd_options);
-    const version = require(path.resolve(process.cwd(), "package.json")).version;
     child_process.execSync("git commit -m " + JSON.stringify("v" + version), cmd_options);
     child_process.execSync("git push", cmd_options);
+    child_process.execSync("npm publish", cmd_options);
 };
 ```

@@ -14,7 +14,6 @@ const cmd_options = {
 };
 const comando_push = function(mensaje) {
     const child_process = require("child_process");
-    // child_process.execSync("git init .", cmd_options);
     child_process.execSync("git add .", cmd_options);
     child_process.execSync("git commit -m " + JSON.stringify(mensaje), cmd_options);
     child_process.execSync("git push", cmd_options);
@@ -23,7 +22,6 @@ const comando_versionate = function(mensaje) {
     const child_process = require("child_process");
     const path = require("path");
     const fs = require("fs");
-    // child_process.execSync("git init .", cmd_options);
     child_process.execSync("git add .", cmd_options);
     child_process.execSync("git commit -m " + JSON.stringify(mensaje), cmd_options);
     child_process.execSync("git push", cmd_options);
