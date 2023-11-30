@@ -19,6 +19,8 @@ npm install --global @allnulled/gitano
 
 Primero, emplazar el directorio actual al `.git` del proyecto. Luego:
 
+----
+
 Para hacer un **push**:
 
 ```sh
@@ -36,6 +38,8 @@ const comando_push = function(mensaje) {
     child_process.execSync("git push", cmd_options);
 };
 ```
+
+----
 
 Para hacer un **versionate**:
 
