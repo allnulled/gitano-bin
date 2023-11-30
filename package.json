@@ -1,13 +1,13 @@
 {
   "name": "gitano",
   "version": "1.0.0",
-  "description": "",
+  "description": "Utilidad para hacer operaciones rápidas con Git en línea de comandos. ",
   "main": "index.js",
   "bin": {
     "gitano": "index.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node test/index.js"
   },
   "keywords": [],
   "author": "",
