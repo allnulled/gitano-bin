@@ -15,7 +15,7 @@ const cmd_options = {
 const comando_push = function(mensaje) {
     const child_process = require("child_process");
     child_process.execSync("git add .", cmd_options);
-    child_process.execSync("git commit -m " + JSON.stringify(mensaje), cmd_options);
+    child_process.execSync("git commit -m " + JSON.stringify(mensaje) + " || echo no_commit", cmd_options);
     child_process.execSync("git push", cmd_options);
 };
 const comando_versionate = function(mensaje) {
@@ -23,7 +23,7 @@ const comando_versionate = function(mensaje) {
     const path = require("path");
     const fs = require("fs");
     child_process.execSync("git add .", cmd_options);
-    child_process.execSync("git commit -m " + JSON.stringify(mensaje), cmd_options);
+    child_process.execSync("git commit -m " + JSON.stringify(mensaje) + " || echo no_commit", cmd_options);
     child_process.execSync("git push", cmd_options);
     child_process.execSync("npm version patch", cmd_options);
     const package_path = path.resolve(process.cwd(), "package.json");
@@ -35,7 +35,7 @@ const comando_versionate = function(mensaje) {
     fs.writeFileSync(package_path, JSON.stringify(package_data, null, 4), "utf8");
     const version = package_data.version;
     child_process.execSync("git add .", cmd_options);
-    child_process.execSync("git commit -m " + JSON.stringify("v" + version), cmd_options);
+    child_process.execSync("git commit -m " + JSON.stringify("v" + version) + " || echo no_commit", cmd_options);
     child_process.execSync("git push", cmd_options);
     child_process.execSync("npm publish", cmd_options);
 };
